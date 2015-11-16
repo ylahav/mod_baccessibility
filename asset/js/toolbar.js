@@ -1,24 +1,32 @@
-function createCookie(name,value,days) {
-	if (days) {
-		var date = new Date();
-		date.setTime(date.getTime()+(days*24*60*60*1000));
-		var expires = "; expires="+date.toGMTString();
-	}
-	else var expires = "";
-	document.cookie = name+"="+value+expires+"; path=/";
+function createLocalStorage(name,value,days) {
+    var expires;
+    if (days) {
+		expires = "";var expirationMS = days * 24 * 60 * 60 * 1000;
+	} else {
+        expires = "";
+    }
+    var record = {value: JSON.stringify(value), timestamp: new Date().getTime() + expirationMS}
+	localStorage.setItem( name, JSON.stringify(record) );
 }
-function readCookie(name) {
+function readLocalStorage(name) {
+    var record;
 	var nameEQ = name + "=";
-	var ca = document.cookie.split(';');
-	for(var i=0;i < ca.length;i++) {
-		var c = ca[i];
-		while (c.charAt(0)==' ') c = c.substring(1,c.length);
-		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-	}
+    try {
+        record = JSON.parse( localStorage.getItem( name ) );
+    } catch( e ) {
+        record = null;
+    }
+	if (record) {
+        if (new Date().getTime() < record.timestamp) {
+            if (record.value.length != 2) { /* 2 means two quotes */
+                return nameEQ + record.value;
+            }
+        }
+    }
 	return null;
 }
-function eraseCookie(name) {
-	createCookie(name,"",-1);
+function eraseLocalStorage(name) {
+	createLocalStorage(name,"",-1);
 }
 
 /**
@@ -105,14 +113,14 @@ jQuery(document).ready(function($){
 		 * contrast
 		 **/
 		
-		var b_acc_dark = readCookie('b-acc_dark');
-		var b_acc_bright = readCookie('b-acc_bright');
-		var b_acc_grayscale = readCookie('b-acc_grayscale');
+		var b_acc_dark = readLocalStorage('b-acc_dark');
+		var b_acc_bright = readLocalStorage('b-acc_bright');
+		var b_acc_grayscale = readLocalStorage('b-acc_grayscale');
 		
 		$( '.b-acc-dark-btn' ).click( function () {
-			eraseCookie('b-acc_bright');
-			eraseCookie('b-acc_grayscale');
-			createCookie('b-acc_dark','dark',1);
+			eraseLocalStorage('b-acc_bright');
+			eraseLocalStorage('b-acc_grayscale');
+			createLocalStorage('b-acc_dark','dark',1);
 			
 		 	$( 'body' )
 		 		.removeClass( 'b-acc-bright' )
@@ -123,9 +131,9 @@ jQuery(document).ready(function($){
 		});
 			
 		$( '.b-acc-bright-btn' ).click( function () {
-			eraseCookie( 'b-acc_dark' );
-			eraseCookie( 'b-acc_grayscale' );
-			createCookie('b-acc_bright','bright',1);
+			eraseLocalStorage( 'b-acc_dark' );
+			eraseLocalStorage( 'b-acc_grayscale' );
+			createLocalStorage('b-acc_bright','bright',1);
 			
 			$( 'body' )
 				.removeClass( 'b-acc-dark' )
@@ -136,9 +144,9 @@ jQuery(document).ready(function($){
 		});
 		
 		$( '.b-acc-grayscale' ).click( function () {
-			eraseCookie( 'b-acc_dark' );
-			eraseCookie( 'b-acc_bright' );
-			createCookie('b-acc_grayscale','grayscale',1);
+			eraseLocalStorage( 'b-acc_dark' );
+			eraseLocalStorage( 'b-acc_bright' );
+			createLocalStorage('b-acc_grayscale','grayscale',1);
 			
 			$( 'body' )
 				.removeClass( 'b-acc-dark' )
@@ -150,9 +158,9 @@ jQuery(document).ready(function($){
 		});
 		
 		$( '.b-acc-contrast-reset' ).click( function () {
-			eraseCookie( 'b-acc_dark' );
-			eraseCookie( 'b-acc_bright' );
-			eraseCookie( 'b-acc_grayscale' );
+			eraseLocalStorage( 'b-acc_dark' );
+			eraseLocalStorage( 'b-acc_bright' );
+			eraseLocalStorage( 'b-acc_grayscale' );
 			
 			$(this).addClass( 'b-acc-hide' );
 			
