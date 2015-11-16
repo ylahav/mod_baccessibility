@@ -1,0 +1,190 @@
+#b-acc-toolbarWrap {
+  width: 160px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  border: 0;
+  z-index: 999999;
+  font-family: 'Arial', sans-serif !important;
+  -webkit-transition: all 400ms ease-out;
+  -moz-transition: all 400ms ease-out;
+  -ms-transition: all 400ms ease-out;
+  -o-transition: all 400ms ease-out;
+  transition: all 400ms ease-out; }
+  #b-acc-toolbarWrap button.b-acc_hide_toolbar {
+    border: 0;
+    padding: 0;
+    position: absolute;
+    top: 10%;
+    background-color: #4169E1 !important;
+    background-image: url("../images/universal-access.png");
+    background-repeat: no-repeat; }
+    #b-acc-toolbarWrap button.b-acc_hide_toolbar.middle {
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%); }
+    #b-acc-toolbarWrap button.b-acc_hide_toolbar.bottom {
+      top: auto;
+      bottom: 10%; }
+    #b-acc-toolbarWrap button.b-acc_hide_toolbar span {
+      position: absolute;
+      display: block;
+      width: 100%;
+      text-align: center;
+      bottom: 5px;
+      top: 39px;
+      line-height: 12px;
+      font-weight: 700;
+      height: 12px;
+      background-color: #4169E1 !important;
+      color: white !important; }
+    #b-acc-toolbarWrap button.b-acc_hide_toolbar.b-acc-icon-small {
+      width: 38px;
+      height: 38px;
+      font-size: 9px;
+      background-size: 80%;
+      background-position: center center;
+      overflow: hidden; }
+    #b-acc-toolbarWrap button.b-acc_hide_toolbar.b-acc-icon-medium {
+      width: 66px;
+      height: 56px;
+      font-size: 9px;
+      background-position: center 5px; }
+  #b-acc-toolbarWrap.right {
+    right: 0; }
+    #b-acc-toolbarWrap.right.close-toolbar {
+      right: -160px; }
+    #b-acc-toolbarWrap.right button.b-acc_hide_toolbar.b-acc-icon-small {
+      left: -38px; }
+    #b-acc-toolbarWrap.right button.b-acc_hide_toolbar.b-acc-icon-medium {
+      left: -66px; }
+  #b-acc-toolbarWrap.left {
+    left: 0; }
+    #b-acc-toolbarWrap.left.close-toolbar {
+      left: -160px; }
+    #b-acc-toolbarWrap.left button.b-acc_hide_toolbar.b-acc-icon-small {
+      right: -38px; }
+    #b-acc-toolbarWrap.left button.b-acc_hide_toolbar.b-acc-icon-medium {
+      right: -66px; }
+  #b-acc-toolbarWrap .b-acc-author {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    left: 5px;
+    text-align: center;
+    font-size: 13px;
+    background-color: transparent !important; }
+    #b-acc-toolbarWrap .b-acc-author a {
+      color: #fffacd !important;
+      -webkit-transition: all 250ms ease;
+      -moz-transition: all 250ms ease;
+      -ms-transition: all 250ms ease;
+      -o-transition: all 250ms ease;
+      transition: all 250ms ease;
+      background-color: transparent !important; }
+      #b-acc-toolbarWrap .b-acc-author a:hover, #b-acc-toolbarWrap .b-acc-author a:focus {
+        opacity: 1;
+        text-decoration: none; }
+
+#b-acc_toolbar {
+  list-style: none;
+  padding: 0 10px;
+  margin: 0;
+  background: #242424 !important;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0; }
+  #b-acc_toolbar h3 {
+    font-size: 18px !important;
+    font-weight: 700;
+    text-align: center;
+    padding: 0 0 10px;
+    margin: 10px 0 0;
+    color: #fffacd !important;
+    background-color: transparent !important; }
+  #b-acc_toolbar .b-acc-font-reset,
+  #b-acc_toolbar .b-acc-contrast-reset {
+    -webkit-appearance: none;
+    background: none;
+    border: 0;
+    padding: 0;
+    text-decoration: underline;
+    text-align: center; }
+  #b-acc_toolbar li {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #575757;
+    background-color: transparent !important; }
+    #b-acc_toolbar li button {
+      color: white;
+      border: 0;
+      padding: 0 10px;
+      font-size: 13px;
+      display: block;
+      width: 100%;
+      text-align: left;
+      line-height: 2;
+      background-color: transparent !important;
+      -webkit-appearance: none;
+      -webkit-transition: all 250ms ease;
+      -moz-transition: all 250ms ease;
+      -ms-transition: all 250ms ease;
+      -o-transition: all 250ms ease;
+      transition: all 250ms ease; }
+      #b-acc_toolbar li button:hover, #b-acc_toolbar li button:focus {
+        background-color: #3d3d3d !important; }
+      #b-acc_toolbar li button.b-acc-hide {
+        display: none; }
+      #b-acc_toolbar li button.b-acc-hide, #b-acc_toolbar li button.b-acc-contrast-reset, #b-acc_toolbar li button.b-acc-font-reset {
+        border-top: 1px solid #575757; }
+
+.rtl #b-acc_toolbar li button {
+  text-align: right; }
+  .rtl #b-acc_toolbar li button.b-acc-contrast-reset, .rtl #b-acc_toolbar li button.b-acc-font-reset {
+    text-align: center; }
+
+body.b-acc-dark {
+  background: #171717 !important;
+  color: white !important; }
+
+body.b-acc-bright {
+  background: white !important;
+  color: #171717 !important; }
+
+body.b-acc-dark a {
+  color: #ffee00 !important; }
+
+body.b-acc-dark .panel,
+body.b-acc-dark .jumbotron,
+body.b-acc-dark .container .jumbotron,
+body.b-acc-dark .container-fluid .jumbotron {
+  background-color: rgba(255, 255, 255, 0.1); }
+
+body.b-acc-dark .panel-default {
+  border-color: rgba(255, 255, 255, 0.2); }
+
+body.b-acc-dark #b-acc_toolbar li button.b-acc-dark-btn {
+  background-color: #3d3d3d; }
+
+body.b-acc-bright #b-acc_toolbar li button.b-acc-bright-btn {
+  background-color: #3d3d3d !important; }
+
+body.b-acc-focus a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px; }
+
+body.b-acc-grayscale {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+  filter: gray;
+  -webkit-filter: grayscale(100%); }
+  body.b-acc-grayscale #b-acc_toolbar li button.b-acc-grayscale {
+    background-color: #3d3d3d; }

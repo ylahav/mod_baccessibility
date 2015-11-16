@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>B-Accessibility</name>
+    <author>Yair Lahav</author>
+    <version>1.0.1</version>
+    <description>B-Accessibility... to improve site accessibility</description>
+    <files>
+        <filename>mod_baccessibility.xml</filename>
+        <filename module="mod_baccessibility">mod_baccessibility.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+		<filename>asset/index.html</filename>
+		<filename>asset/css/index.html</filename>
+		<filename>asset/css/style.css</filename>
+		<filename>asset/images/index.html</filename>
+		<filename>asset/images/universal-access.png</filename>
+		<filename>asset/js/index.html</filename>
+		<filename>asset/js/grayscale.js</filename>
+		<filename>asset/js/toolbar.js</filename>
+    </files>
+    <config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="toolbar_side"
+                       type="list"
+                       default="left"
+                       label="MOD_BACCESSIBILITY_FIELD_TOOLBAR_SIDE_LABEL"
+                       description="MOD_BACCESSIBILITY_FIELD_TOOLBAR_SIDE_DESC"	>
+                    <option value="left">MOD_BACCESSIBILITY_FIELD_TOOLBAR_SIDE_LEFT</option>
+                    <option value="right">MOD_BACCESSIBILITY_FIELD_TOOLBAR_SIDE_RIGHT</option>
+				</field>
+				<field name="icon_position"
+                       type="list"
+                       default="top"
+                       label="MOD_BACCESSIBILITY_FIELD_ICON_POS_LABEL"
+                       description="MOD_BACCESSIBILITY_FIELD_ICON_POS_DESC"	>
+                    <option value="top">MOD_BACCESSIBILITY_FIELD_ICON_POS_TOP</option>
+                    <option value="bottom">MOD_BACCESSIBILITY_FIELD_ICON_POS_BOTTOM</option>
+				</field>
+				<field name="icon_size"
+                       type="list"
+                       default="small"
+                       label="MOD_BACCESSIBILITY_FIELD_ICON_SIZE_LABEL"
+                       description="MOD_BACCESSIBILITY_FIELD_ICON_SIZE_DESC"	>
+                    <option value="small">MOD_BACCESSIBILITY_FIELD_ICON_SIZE_SMALL</option>
+                    <option value="medium">MOD_BACCESSIBILITY_FIELD_ICON_SIZE_MEDIUM</option>
+				</field>
+                <field name="fontsizer_tags"
+                       type="text"
+                       default="p,h1,h2,h3"
+                       label="MOD_BACCESSIBILITY_FIELD_TOOLBAR_FONFSIZER_TAGS_LABEL"
+                       description="MOD_BACCESSIBILITY_FIELD_TOOLBAR_FONFSIZER_TAGS_DESC"	>
+				</field>
+                <field name="fontsizer_size"
+                       type="integer"
+                       default="2"
+                       first="1"
+                       last="10"
+                       step="1"
+                       label="MOD_BACCESSIBILITY_FIELD_TOOLBAR_FONFSIZER_SIZE_LABEL"
+                       description="MOD_BACCESSIBILITY_FIELD_TOOLBAR_FONFSIZER_SIZE_DESC"	>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
