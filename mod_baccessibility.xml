@@ -54,15 +54,36 @@
                        description="MOD_BACCESSIBILITY_FIELD_TOOLBAR_FONFSIZER_TAGS_DESC"	>
 				</field>
                 <field name="fontsizer_size"
-                       type="integer"
+                       type="text"
                        default="2"
-                       first="1"
-                       last="10"
-                       step="1"
+                       filter="integer"
                        label="MOD_BACCESSIBILITY_FIELD_TOOLBAR_FONFSIZER_SIZE_LABEL"
                        description="MOD_BACCESSIBILITY_FIELD_TOOLBAR_FONFSIZER_SIZE_DESC"	>
 				</field>
 			</fieldset>
+            <fieldset name="BACCESSIBILITY_CONFIGURATION">
+                <field name="use_awesome"
+                       type="checkbox"
+                       label="MOD_BACCESSIBILITY_FIELD_CONFIG_USE_AWESOME_LABEL"
+                       description="MOD_BACCESSIBILITY_FIELD_CONFIG_USE_AWESOME_DESC" 
+                       value="1"
+                       default="1">
+                </field>
+                <field name="load_awesome"
+                       type="checkbox"
+                       label="MOD_BACCESSIBILITY_FIELD_CONFIG_LOAD_AWESOME_LABEL"
+                       description="MOD_BACCESSIBILITY_LOAD_CONFIG_USE_AWESOME_DESC"
+                       value="1"
+                       default="0">
+                </field>
+                <field name="awesome_path"
+                       type="text"
+                       default="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+                       label="MOD_BACCESSIBILITY_FIELD_CONFIG_AWESOME_PATH_LABEL"
+                       description="MOD_BACCESSIBILITY_LOAD_CONFIG_AWESOME_PATH__DESC"
+                       size="200">
+                </field>
+            </fieldset>
 		</fields>
 	</config>
 </extension>
