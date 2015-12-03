@@ -20,11 +20,11 @@
 		<filename>asset/js/grayscale.js</filename>
 		<filename>asset/js/toolbar.js</filename>
     </files>
-	<languages>
-		<language tag="en-GB">en-GB.mod_baccessibility.ini</language>
-		<language tag="en-GB">en-GB.mod_baccessibility.sys.ini</language>
-		<language tag="he-IL">he-IL.mod_baccessibility.ini</language>
-		<language tag="he-IL">he-IL.mod_baccessibility.sys.ini</language>
+	<languages folder="language">
+		<language tag="en-GB" folder="en-GB">en-GB.mod_baccessibility.ini</language>
+		<language tag="en-GB" folder="en-GB">en-GB.mod_baccessibility.sys.ini</language>
+		<language tag="he-IL" folder="he-IL">he-IL.mod_baccessibility.ini</language>
+		<language tag="he-IL" folder="he-IL">he-IL.mod_baccessibility.sys.ini</language>
 	</languages>
     <config>
 		<fields name="params">
