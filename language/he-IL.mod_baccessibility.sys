@@ -1,0 +1,9 @@
+; Joomla! Project
+; Copyright (C) 2015 Yair Lahav. All rights reserved.
+; License GNU General Public License version 2 or later; see LICENSE.txt, see LICENSE.php
+; Note : All ini files need to be saved as UTF-8
+
+MOD_BACCESSIBILITY="נגישות"
+MOD_BACCESSIBILITY_XML_DESCRIPTION="מודול הנגישות מציג לוח בקרה לביצוע פעולות התומכות באתר נגיש."
+MOD_BACCESSIBILITY_LAYOUT_DEFAULT="Default"
+
