@@ -25,8 +25,8 @@ defined('_JEXEC') or die;
             <h3 tabindex="0"><?php echo $module->title; ?></h3>
         <?php endif; ?>
         <li id="b-acc-fontsizer" data-size-tags="<?php echo $params['fontsizer_tags']; ?>" data-size-jump="<?php echo $params['fontsizer_size']; ?>">
-			<button class="small-letter" tabindex="0"><i class="fa fa-search-plus"></i> Decrease font size</button>
-			<button class="big-letter" tabindex="0"><i class="fa fa-search-minus"></i> Increase font size</button>
+			<button class="small-letter" tabindex="0"><i class="fa fa-search-minus"></i> Decrease font size</button>
+			<button class="big-letter" tabindex="0"><i class="fa fa-search-plus"></i> Increase font size</button>
 			<button class="b-acc-font-reset b-acc-hide" tabindex="0"><i class="fa fa-refresh"></i> Default font sizes</button>
 		</li>
 		<li id="b-acc-contrast">
