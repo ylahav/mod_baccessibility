@@ -20,17 +20,18 @@
 		<filename>asset/js/grayscale.js</filename>
 		<filename>asset/js/toolbar.js</filename>
     </files>
-	<languages>
-		<language tag="en-GB">en-GB.mod_baccessibility.ini</language>
-		<language tag="en-GB">en-GB.mod_baccessibility.sys.ini</language>
-		<language tag="he-IL">he-IL.mod_baccessibility.ini</language>
-		<language tag="he-IL">he-IL.mod_baccessibility.sys.ini</language>
+	<languages folder="language">
+		<language tag="en-GB" folder="en-GB">en-GB.mod_baccessibility.ini</language>
+		<language tag="en-GB" folder="en-GB">en-GB.mod_baccessibility.sys.ini</language>
+		<language tag="he-IL" folder="he-IL">he-IL.mod_baccessibility.ini</language>
+		<language tag="he-IL" folder="he-IL">he-IL.mod_baccessibility.sys.ini</language>
 	</languages>
     <config>
 		<fields name="params">
 			<fieldset name="basic">
 				<field name="toolbar_side"
-                       type="list"
+                       type="radio"
+                    class="btn-group "
                        default="left"
                        label="MOD_BACCESSIBILITY_FIELD_TOOLBAR_SIDE_LABEL"
                        description="MOD_BACCESSIBILITY_FIELD_TOOLBAR_SIDE_DESC"	>
@@ -38,7 +39,8 @@
                     <option value="right">MOD_BACCESSIBILITY_FIELD_TOOLBAR_SIDE_RIGHT</option>
 				</field>
 				<field name="icon_position"
-                       type="list"
+                       type="radio"
+                    class="btn-group "
                        default="top"
                        label="MOD_BACCESSIBILITY_FIELD_ICON_POS_LABEL"
                        description="MOD_BACCESSIBILITY_FIELD_ICON_POS_DESC"	>
@@ -46,7 +48,8 @@
                     <option value="bottom">MOD_BACCESSIBILITY_FIELD_ICON_POS_BOTTOM</option>
 				</field>
 				<field name="icon_size"
-                       type="list"
+                       type="radio"
+                    class="btn-group "
                        default="small"
                        label="MOD_BACCESSIBILITY_FIELD_ICON_SIZE_LABEL"
                        description="MOD_BACCESSIBILITY_FIELD_ICON_SIZE_DESC"	>
@@ -69,18 +72,23 @@
 			</fieldset>
             <fieldset name="BACCESSIBILITY_CONFIGURATION">
                 <field name="use_awesome"
-                       type="checkbox"
+                       type="radio" 
+                       class="btn-group btn-group-yesno"
                        label="MOD_BACCESSIBILITY_FIELD_CONFIG_USE_AWESOME_LABEL"
                        description="MOD_BACCESSIBILITY_FIELD_CONFIG_USE_AWESOME_DESC" 
-                       value="1"
                        default="1">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
                 </field>
                 <field name="load_awesome"
-                       type="checkbox"
+                       type="radio" 
+                       class="btn-group btn-group-yesno"
                        label="MOD_BACCESSIBILITY_FIELD_CONFIG_LOAD_AWESOME_LABEL"
                        description="MOD_BACCESSIBILITY_LOAD_CONFIG_USE_AWESOME_DESC"
-                       value="1"
+                       
                        default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
                 </field>
                 <field name="awesome_path"
                        type="text"
