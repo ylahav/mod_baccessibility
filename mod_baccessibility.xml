@@ -2,7 +2,7 @@
 <extension type="module" version="3.1.0" client="site" method="upgrade">
     <name>B-Accessibility</name>
     <author>Yair Lahav</author>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <description>B-Accessibility... to improve site accessibility</description>
     <files>
         <filename>mod_baccessibility.xml</filename>
