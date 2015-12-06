@@ -2,8 +2,9 @@
 <extension type="module" version="3.1.0" client="site" method="upgrade">
     <name>B-Accessibility</name>
     <author>Yair Lahav</author>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <description>B-Accessibility... to improve site accessibility</description>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
     <files>
         <filename>mod_baccessibility.xml</filename>
         <filename module="mod_baccessibility">mod_baccessibility.php</filename>
