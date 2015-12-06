@@ -2,7 +2,7 @@
 <extension type="module" version="3.1.0" client="site" method="upgrade">
     <name>B-Accessibility</name>
     <author>Yair Lahav</author>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <description>B-Accessibility... to improve site accessibility</description>
     <files>
         <filename>mod_baccessibility.xml</filename>
@@ -18,13 +18,13 @@
 		<filename>asset/images/universal-access.png</filename>
 		<filename>asset/js/index.html</filename>
 		<filename>asset/js/grayscale.js</filename>
-		<filename>asset/js/toolbar.js</filename>
+		<filename>asset/js/baccessibility.jquery.js</filename>
     </files>
 	<languages folder="language">
-		<language tag="en-GB" folder="en-GB">en-GB.mod_baccessibility.ini</language>
-		<language tag="en-GB" folder="en-GB">en-GB.mod_baccessibility.sys.ini</language>
-		<language tag="he-IL" folder="he-IL">he-IL.mod_baccessibility.ini</language>
-		<language tag="he-IL" folder="he-IL">he-IL.mod_baccessibility.sys.ini</language>
+		<language tag="en-GB" folder="en-GB">en-GB/en-GB.mod_baccessibility.ini</language>
+		<language tag="en-GB" folder="en-GB">en-GB/en-GB.mod_baccessibility.sys.ini</language>
+		<language tag="he-IL" folder="he-IL">he-IL/he-IL.mod_baccessibility.ini</language>
+		<language tag="he-IL" folder="he-IL">he-IL/he-IL.mod_baccessibility.sys.ini</language>
 	</languages>
     <config>
 		<fields name="params">
