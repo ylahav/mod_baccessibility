@@ -66,7 +66,7 @@
     right: 0;
 }
 #b-acc-toolbarWrap.right.close-toolbar {
-    right: -160px;
+    right: -180px;
 }
 #b-acc-toolbarWrap.right button.b-acc_hide_toolbar.b-acc-icon-small {
     left: -38px;
@@ -78,7 +78,7 @@
     left: 0;
 }
 #b-acc-toolbarWrap.left.close-toolbar {
-    left: -160px;
+    left: -180px;
 }
 #b-acc-toolbarWrap.left button.b-acc_hide_toolbar.b-acc-icon-small {
     right: -38px;
