@@ -26,7 +26,8 @@ if( $params->get('use_awesome') ) {
     $doc->addStyleSheet( $params['awesome_path'] );
 }
 
-$doc->addScript( $modBaseUrl . '/asset/js/toolbar.js' );
+//$doc->addScript( $modBaseUrl . '/asset/js/toolbar.js' );
+$doc->addScript( $modBaseUrl . '/asset/js/baccessibility.jquery.js' );
 $doc->addScript( $modBaseUrl . '/asset/js/grayscale.js' );
 
 require JModuleHelper::getLayoutPath('mod_baccessibility');
