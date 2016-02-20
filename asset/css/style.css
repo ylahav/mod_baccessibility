@@ -225,3 +225,24 @@ body.b-acc-grayscale #b-acc_toolbar li button.b-acc-grayscale {
 .body .container {
     background-color: transparent;
 }
+
+/* Accessibilty statement (popup) */
+.messagepop {
+	background-color:#FFFFFF;
+	border:1px solid #999999;
+	cursor:default;
+	display:none;
+	left: 25%;
+	margin-top: 15px;
+	position:fixed;
+	text-align:left;
+	top: 100px;
+	width:50%;
+	z-index:50;
+	padding: 25px 25px 20px;
+}
+.messagepop p, .messagepop.div {
+	border-bottom: 1px solid #EFEFEF;
+	margin: 8px 0;
+	padding-bottom: 8px;
+}

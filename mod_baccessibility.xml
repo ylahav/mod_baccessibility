@@ -99,6 +99,25 @@
                        size="200">
                 </field>
             </fieldset>
+            <fieldset name="BACCESSIBILITY_STATEMENT">
+                <field name="show_statement"
+                       type="radio"
+                       class="btn-group btn-group-yesno"
+                       label="MOD_BACCESSIBILITY_FIELD_CONFIG_SHOW_STATEMENT_LABEL"
+                       description="MOD_BACCESSIBILITY_FIELD_CONFIG_SHOW_STATEMENT_DESC"
+                       default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="statement"
+                       type="editor"
+                       filter="safehtml"
+                       label="MOD_BACCESSIBILITY_FIELD_CONFIG_STATEMENT_LABEL"
+                       description="MOD_BACCESSIBILITY_LOAD_CONFIG_STATEMENT_DESC"
+                       translate_default="1"
+                       default="MOD_BACCESSIBILITY_LOAD_CONFIG_STATEMENT_DEFAULT">
+                </field>
+            </fieldset>
 		</fields>
 	</config>
 </extension>

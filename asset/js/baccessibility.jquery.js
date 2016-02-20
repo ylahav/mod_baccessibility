@@ -21,11 +21,11 @@
                 tb_wrapper_elm: "#b-acc-toolbarWrap",
                 tb_btn_elm: ".b-acc_hide_toolbar",
                 //fontsizer
-                fs_tags: "p,a,li,h1,h2,h3,h4",
-                fs_size_jump: 2,
-                fs_increase_elm: "#b-acc-fontsizer button.big-letter",
-                fs_decrease_elm: "#b-acc-fontsizer button.small-letter",
-                fs_reset_elm: ".b-acc-font-reset",
+                fontsizer_tags: "p,a,li,h1,h2,h3,h4",
+                fontsizer_size_jump: 2,
+                fontsizer_increase_elm: "#b-acc-fontsizer button.big-letter",
+                fontsizer_decrease_elm: "#b-acc-fontsizer button.small-letter",
+                fontsizer_reset_elm: ".b-acc-font-reset",
                 
 
             };
@@ -175,40 +175,53 @@
         initFontSizer: function (plg_settings) {
             
             //increase
-            $(plg_settings.fs_increase_elm).click(function () {
+            $(plg_settings.fontsizer_increase_elm).click(function () {
 
-                $(plg_settings.fs_tags).filter(function (index, elm) {
+                $(plg_settings.fontsizer_tags).filter(function (index, elm) {
+
 
                     $(elm).css('font-size', function () {
-                        return parseInt($(elm).css('font-size')) + plg_settings.fs_size_jump + 'px';
+                        var fontSizeStrArray = new Array("medium", "xx-small", "x-small", "small", "large", "x-large", "xx-large");
+                        console.log($(this));
+                        if (fontSizeStrArray.indexOf( $(this).css('font-size') ) != -1) {
+                            alert (fontSizeStrArray.indexOf( $(this).css('font-size')) + ', ' + $(this).css('font-size'));
+                            return 'larger';
+                        } else {
+                            return parseInt($(elm).css('font-size')) + plg_settings.fontsizer_size_jump + 'px';
+                        }
                     });
                 });
 
-                $(plg_settings.fs_reset_elm).removeClass('b-acc-hide');
+                $(plg_settings.fontsizer_reset_elm).removeClass('b-acc-hide');
 
             });
 
             // decrease
-            $(plg_settings.fs_decrease_elm).click(function () {
+            $(plg_settings.fontsizer_decrease_elm).click(function () {
 
-                $(plg_settings.fs_tags).filter(function (index) {
-                    $(this).css('font-size', function () {
-                        return parseInt($(this).css('font-size')) - plg_settings.fs_size_jump + 'px';
-                    });
+                $(plg_settings.fontsizer_tags).filter(function (index) {
+                    var fontSizeStrArray = new Array("medium", "xx-small", "x-small", "small", "large", "x-large", "xx-large");
+                    if (fontSizeStrArray.indexOf( $(this).css('font-size') ) != -1) {
+                        return 'smaller';
+                    } else {
+                        $(this).css('font-size', function () {
+                            return parseInt($(this).css('font-size')) - plg_settings.fontsizer_size_jump + 'px';
+                        });
+                    }
                 });
 
-                $(plg_settings.fs_reset_elm).removeClass('b-acc-hide');
+                $(plg_settings.fontsizer_reset_elm).removeClass('b-acc-hide');
 
             });
 
             // reset to default
-            $(plg_settings.fs_reset_elm).click(function () {
+            $(plg_settings.fontsizer_reset_elm).click(function () {
 
-                $(plg_settings.fs_tags).filter(function (index) {
+                $(plg_settings.fontsizer_tags).filter(function (index) {
                     $(this).attr("style", "");
                 });
                 // hide reset button after pressing
-                $(plg_settings.fs_reset_elm).addClass('b-acc-hide');
+                $(plg_settings.fontsizer_reset_elm).addClass('b-acc-hide');
 
             });
         }
@@ -228,7 +241,37 @@
 
 })(jQuery, window, document);
 
+function deselect(e) {
+    jQuery('.pop').slideFadeToggle(function() {
+        e.removeClass('selected');
+    });
+}
+
+jQuery.fn.slideFadeToggle = function(easing, callback) {
+    return this.animate({ opacity: 'toggle', height: 'toggle' }, 'fast', easing, callback);
+};
+
 //activate plugin after dom ready
 jQuery(document).ready(function ($) {
-    $(this).baccessibility();
+    var ajaxUrl = 'index.php?option=com_ajax&module=baccessibility&format=json&method=get';
+    var data = {
+        action: 'b_acc_toolbar_ajax',
+    };
+    $.post(ajaxUrl, data, function(response) {
+        $('.b-acc-show-statement').on('click', function() {
+            if($(this).hasClass('selected')) {
+                deselect($(this));
+            } else {
+                $(this).addClass('selected');
+                $('.pop').slideFadeToggle();
+            }
+            return false;
+        });
+
+        $('.close').on('click', function() {
+            deselect($('.b-acc-show-statement'));
+            return false;
+        });
+        $(this).baccessibility(jQuery.parseJSON(response.data));
+    });
 });

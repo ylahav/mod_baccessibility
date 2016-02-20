@@ -53,5 +53,14 @@ defined('_JEXEC') or die;
 		<li id="b-acc-links">
 			<button class="b-acc-toggle-underline" tabindex="0"><i class="fa fa-underline"></i> <?php echo JText::_('MOD_BACCESSIBILITY_TOGGLE_UNDERLINE'); ?></button>
 		</li>
+		<?php if ( $params['show_statement']) : ?>
+		<li id="b-acc-statement">
+			<button class="b-acc-show-statement" tabindex="0"><?php echo JText::_('MOD_BACCESSIBILITY_ACCESSIBILITY_STATEMENT'); ?></button>
+			<div class="messagepop pop">
+				<?php echo $params['statement']; ?>
+				<a class="close" href="#"><?php echo JText::_('MOD_BACCESSIBILITY_STATEMENT_CLOSE'); ?></a>
+			</div>
+		</li>
+		<?php endif; ?>
 	</ul>
 </nav>
