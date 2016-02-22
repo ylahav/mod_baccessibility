@@ -6,3 +6,5 @@ You can control the view with some configuration attributes in Joomla management
 
 The module should be refer to a specifc location that can be added in the template's index.php file
 The module will "float" on left or right side of the screen.
+
+Demo: http://b-demo.bonimba.co.il/
