@@ -20,15 +20,16 @@ defined('_JEXEC') or die;
     <?php
         if ($params['use_awesome']) {
      ?>
-            <button title="<?php echo JText::_('MOD_BACCESSIBILITY_ACCESSIBILITY_OPTIONS'); ?>" tabindex="0" class="b-acc_hide_toolbar <?php echo $params['toolbar_position']; ?> b-acc-icon-<?php echo $params['icon_size']; ?>">
-                <span><i class="fa fa-wheelchair fa-3x"></i></span>
-            </button>
+            <div role="button" title="<?php echo JText::_('MOD_BACCESSIBILITY_ACCESSIBILITY_OPTIONS'); ?>" tabindex="0"
+				class="b-acc_hide_toolbar <?php echo $params['toolbar_position']; ?> b-acc-icon-<?php echo $params['icon_size']; ?>">
+                <i class="fa fa-wheelchair fa-3x" aria-label="wheel chair"></i>
+            </div>
     <?php
         } else {
     ?>
-	<button tabindex="0" class="b-acc_hide_toolbar $params['toolbar_position']; b-acc-icon-<?php echo $params['icon_size']; ?>">
+	<div tabindex="0" role="button" aria-pressed="false" aria-title="toggle accessibility toolbar" class="b-acc_hide_toolbar $params['toolbar_position']; b-acc-icon-<?php echo $params['icon_size']; ?>">
 		<span><?php echo JText::_('MOD_BACCESSIBILITY_ACCESSIBILITY'); ?></span>
-	</button>
+	</div>
 	<?php
         }
     ?>

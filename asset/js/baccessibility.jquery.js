@@ -70,6 +70,19 @@
                 }
 
             });
+			
+			$(plg_settings.tb_btn_elm).focus(function (event) {
+                
+                $(plg_settings.tb_wrapper_elm).toggleClass("close-toolbar");
+
+                if ($(plg_settings.tb_wrapper_elm).hasClass('close-toolbar')) {
+                    $(plg_settings.tb_wrapper_elm).children("a, button,h3").attr('tabindex', '-1');
+                }
+                else {
+                    $(plg_settings.tb_wrapper_elm).children("a, button,h3").attr('tabindex', '0');
+                }
+
+            });
         },
         
         initLinksUnderline: function(plg_settings){

@@ -13,7 +13,7 @@
     -o-transition: all 400ms ease-out;
     transition: all 400ms ease-out;
 }
-#b-acc-toolbarWrap button.b-acc_hide_toolbar {
+#b-acc-toolbarWrap div.b-acc_hide_toolbar {
     border: 0;
     padding: 0;
     position: absolute;
@@ -22,7 +22,7 @@
     /* background-image: url("../images/universal-access.png"); */
     background-repeat: no-repeat;
 }
-#b-acc-toolbarWrap button.b-acc_hide_toolbar.middle {
+#b-acc-toolbarWrap div.b-acc_hide_toolbar.middle {
     top: 50%;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -30,12 +30,12 @@
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-#b-acc-toolbarWrap button.b-acc_hide_toolbar.bottom {
+#b-acc-toolbarWrap div.b-acc_hide_toolbar.bottom {
     top: auto;
     bottom: 10%;
 }
 /*
-#b-acc-toolbarWrap button.b-acc_hide_toolbar span {
+#b-acc-toolbarWrap div.b-acc_hide_toolbar span {
     position: absolute;
     display: block;
     width: 100%;
@@ -48,7 +48,7 @@
     background-color: #4169E1 !important;
     color: white !important;
 } */
-#b-acc-toolbarWrap button.b-acc_hide_toolbar.b-acc-icon-small {
+#b-acc-toolbarWrap div.b-acc_hide_toolbar.b-acc-icon-small {
     width: 38px;
     height: 38px;
     font-size: 9px;
@@ -56,7 +56,7 @@
     background-position: center center;
     overflow: hidden;
 }
-#b-acc-toolbarWrap button.b-acc_hide_toolbar.b-acc-icon-medium {
+#b-acc-toolbarWrap div.b-acc_hide_toolbar.b-acc-icon-medium {
     width: 66px;
     height: 56px;
     font-size: 9px;
@@ -68,10 +68,10 @@
 #b-acc-toolbarWrap.right.close-toolbar {
     right: -180px;
 }
-#b-acc-toolbarWrap.right button.b-acc_hide_toolbar.b-acc-icon-small {
+#b-acc-toolbarWrap.right div.b-acc_hide_toolbar.b-acc-icon-small {
     left: -38px;
 }
-#b-acc-toolbarWrap.right button.b-acc_hide_toolbar.b-acc-icon-medium {
+#b-acc-toolbarWrap.right div.b-acc_hide_toolbar.b-acc-icon-medium {
     left: -66px;
 }
 #b-acc-toolbarWrap.left {
@@ -80,10 +80,10 @@
 #b-acc-toolbarWrap.left.close-toolbar {
     left: -180px;
 }
-#b-acc-toolbarWrap.left button.b-acc_hide_toolbar.b-acc-icon-small {
+#b-acc-toolbarWrap.left div.b-acc_hide_toolbar.b-acc-icon-small {
     right: -38px;
 }
-#b-acc-toolbarWrap.left button.b-acc_hide_toolbar.b-acc-icon-medium {
+#b-acc-toolbarWrap.left div.b-acc_hide_toolbar.b-acc-icon-medium {
     right: -66px;
 }
 #b-acc-toolbarWrap .b-acc-author {
