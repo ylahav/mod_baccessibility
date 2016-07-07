@@ -9,4 +9,4 @@ The module will "float" on left or right side of the screen.
 
 Demo: http://b-demo.bonimba.co.il/
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6XVXE359BPK9N)
+[![Donate](https://img.shields.io/badge/BAccessibility%20--%20donation-paypal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6XVXE359BPK9N)
