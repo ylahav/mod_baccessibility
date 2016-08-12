@@ -26,6 +26,8 @@
 		<language tag="en-GB" folder="en-GB">en-GB/en-GB.mod_baccessibility.sys.ini</language>
 		<language tag="he-IL" folder="he-IL">he-IL/he-IL.mod_baccessibility.ini</language>
 		<language tag="he-IL" folder="he-IL">he-IL/he-IL.mod_baccessibility.sys.ini</language>
+    <language tag="ru-RU" folder="ru-RU">ru-RU/ru-RU.mod_baccessibility.ini</language>
+		<language tag="ru-RU" folder="ru-RU">ru-RU/ru-RU.mod_baccessibility.sys.ini</language>
 	</languages>
     <config>
 		<fields name="params">
@@ -73,20 +75,20 @@
 			</fieldset>
             <fieldset name="BACCESSIBILITY_CONFIGURATION">
                 <field name="use_awesome"
-                       type="radio" 
+                       type="radio"
                        class="btn-group btn-group-yesno"
                        label="MOD_BACCESSIBILITY_FIELD_CONFIG_USE_AWESOME_LABEL"
-                       description="MOD_BACCESSIBILITY_FIELD_CONFIG_USE_AWESOME_DESC" 
+                       description="MOD_BACCESSIBILITY_FIELD_CONFIG_USE_AWESOME_DESC"
                        default="1">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
                 <field name="load_awesome"
-                       type="radio" 
+                       type="radio"
                        class="btn-group btn-group-yesno"
                        label="MOD_BACCESSIBILITY_FIELD_CONFIG_LOAD_AWESOME_LABEL"
                        description="MOD_BACCESSIBILITY_LOAD_CONFIG_USE_AWESOME_DESC"
-                       
+
                        default="0">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
