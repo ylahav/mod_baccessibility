@@ -22,7 +22,7 @@ $modBaseUrl = Juri::base() . 'modules/mod_baccessibility';
 
 $doc->addStyleSheet( $modBaseUrl . '/asset/css/style.css' );
 
-if( $params->get('use_awesome') ) {
+if( $params->get('load_awesome') ) {
     $doc->addStyleSheet( $params['awesome_path'] );
 }
 
