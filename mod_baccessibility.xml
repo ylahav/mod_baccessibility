@@ -87,7 +87,7 @@
                        type="radio"
                        class="btn-group btn-group-yesno"
                        label="MOD_BACCESSIBILITY_FIELD_CONFIG_LOAD_AWESOME_LABEL"
-                       description="MOD_BACCESSIBILITY_LOAD_CONFIG_USE_AWESOME_DESC"
+                       description="MOD_BACCESSIBILITY_FIELD_CONFIG_LOAD_AWESOME_DESC"
 
                        default="0">
                     <option value="1">JYES</option>
@@ -97,7 +97,7 @@
                        type="text"
                        default="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
                        label="MOD_BACCESSIBILITY_FIELD_CONFIG_AWESOME_PATH_LABEL"
-                       description="MOD_BACCESSIBILITY_LOAD_CONFIG_AWESOME_PATH__DESC"
+                       description="MOD_BACCESSIBILITY_FIELD_CONFIG_AWESOME_PATH_DESC"
                        size="200">
                 </field>
             </fieldset>
@@ -115,7 +115,7 @@
                        type="editor"
                        filter="safehtml"
                        label="MOD_BACCESSIBILITY_FIELD_CONFIG_STATEMENT_LABEL"
-                       description="MOD_BACCESSIBILITY_LOAD_CONFIG_STATEMENT_DESC"
+                       description="MOD_BACCESSIBILITY_FIELD_CONFIG_STATEMENT_DESC"
                        translate_default="1"
                        default="MOD_BACCESSIBILITY_LOAD_CONFIG_STATEMENT_DEFAULT">
                 </field>
